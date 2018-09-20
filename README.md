@@ -8,7 +8,6 @@ League of Legends Competitive Matches is a dataset from 2015 to 2018; where it h
 
 Questions:
 1. Amongst different games, can you point out a specific time interval that is indicative of the winner of a match?
-   (e.g. the largest increase/decrease in gold happens at around 30-35 minutes, this time interval would be the answer)
 2. How much do early game (pre 20-minutes) kills and gold determine the winner of the match?
 3. How much do results of previous matches (in best of 3s or 5s series) affect the result of future games?
 
