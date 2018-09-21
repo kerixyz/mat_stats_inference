@@ -11,3 +11,15 @@ Questions:
 2. How much do early game (pre 20-minutes) kills and gold determine the winner of the match?
 3. How much do results of previous matches (in best of 3s or 5s series) affect the result of future games?
 
+---
+
+Data: Cats vs Dogs Popularity in US <br />
+Source: https://data.world/datanerd/cat-vs-dog-popularity-in-u-s <br />
+
+The data consists of household and pet information all over United States. It has the number of households, and percentage of households with pets; it also has population and ownership of cats and dogs in the United States. The data is from data.world and was collected by the American Veterinary Association.
+
+
+Questions:
+1. Do household size impact preference to cats and dogs?
+2. Does geographical location of state impact preference of cats and dogs?
+3. What does America love more? Cats or Dogs.

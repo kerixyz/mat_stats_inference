@@ -1,0 +1,18 @@
+---
+title: "cleaning_data"
+output: html_document
+---
+
+```{r}
+library(readr)
+library(dplyr)
+
+league_of_legends <- read_csv("data/league_of_legends.csv")
+
+league_of_legends <- 
+  league_of_legends %>%
+  filter(Year == 2018) %>% 
+  filter(Type == 'Season')
+
+head(league_of_legends)
+```
