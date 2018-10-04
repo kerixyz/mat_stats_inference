@@ -1,0 +1,76 @@
+---
+title: "exploring_vgsales"
+output: html_document
+---
+Reading in and cleaning the data
+```{r}
+library(dplyr)
+
+#reading in the data
+df <- read.csv("vgsales.csv")
+
+#since df contains 16k observations, lets limit the data to one year
+df <- 
+  df %>%
+  filter(Year == '2016')
+
+#don't want to visualize games with 0 sales so let's remove that
+df <-
+  df %>% 
+  filter(Global_Sales > 0.1)
+```
+Compute the mean and standard deviation for at least three numerical columns.
+Post your code on GitHub and post the means and standard deviations on the webpage.
+```{r}
+#Calculating the means of the sales
+na_mean <- mean(df$NA_Sales)
+eu_mean <- mean(df$EU_Sales)
+jp_mean <- mean(df$JP_Sales)
+ot_mean <- mean(df$Other_Sales)
+gl_mean <- mean(df$Global_Sales)
+
+#Calculating the standard deviations of the sales
+na_sd <- sd(df$NA_Sales)
+eu_sd <- sd(df$EU_Sales)
+jp_sd <- sd(df$JP_Sales)
+ot_sd <- sd(df$Other_Sales)
+gl_sd <- sd(df$Global_Sales)
+
+#saving the data into a dataframe
+region <- c('North America', 'Europe', 'Japan', 'Other', 'Global')
+mean <- c(na_mean, eu_mean, jp_mean, ot_mean, gl_mean)
+standard_deviation <- c(na_sd, eu_sd, jp_sd, ot_sd, gl_sd)
+
+df1 <- data.frame(region, mean, standard_deviation)
+```
+For each Numerical Data Column, make one or two plots of the data, using the graph that best represent the data. 
+Post the code on Github and the graphs on your webpage.
+Write a paragraph summarizing the main features of the data distribution - say the graph exhibits skewness or kurtosis and should be confirmed with quantitative calculations.
+```{r}
+library(ggplot2)
+
+na_plot <- 
+  df %>%
+  ggplot(aes(x = NA_Sales)) +
+  geom_bar() +
+  xlab('Sales in North America (in millions)') +
+  ylab('Number of Games') +
+  labs(title = 'Distribution of game sales in North America')
+
+eu_plot <- 
+  df %>%
+  ggplot(aes(x = EU_Sales)) +
+  geom_bar() +
+  xlab('Sales in Europe (in millions)') +
+  ylab('Number of Games') +
+  labs(title = 'Distribution of game sales in Europe')
+
+jp_plot <- 
+  df %>%
+  ggplot(aes(x = JP_Sales)) +
+  geom_bar() +
+  xlab('Sales in Japan (in millions)') +
+  ylab('Number of Games') +
+  labs(title = 'Distribution of game sales in Japan')
+
+```
