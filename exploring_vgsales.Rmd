@@ -42,6 +42,11 @@ mean <- c(na_mean, eu_mean, jp_mean, ot_mean, gl_mean)
 standard_deviation <- c(na_sd, eu_sd, jp_sd, ot_sd, gl_sd)
 
 df1 <- data.frame(region, mean, standard_deviation)
+
+library(gridExtra)
+png(filename = "mean_sd.png")
+grid.table(df1)
+dev.off()
 ```
 For each Numerical Data Column, make one or two plots of the data, using the graph that best represent the data. 
 Post the code on Github and the graphs on your webpage.
