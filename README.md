@@ -11,7 +11,7 @@ Questions:
 2. Does decrease in sale impact the number of games a publisher will release?
 3. Is the publisher of the game indicative of the game genre and platform? 
 
-Mean and Standard Deviation of Video Game Sales based on their region.
+Mean and Standard Deviation of Video Game Sales based on their region. <br />
 ![](vg_mean_sd.jpg)
 
 Distribution of sales in North America, Europe, and Japan
