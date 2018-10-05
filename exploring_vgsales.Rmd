@@ -76,6 +76,7 @@ jp_plot <-
   geom_bar() +
   xlab('Sales in Japan (in millions)') +
   ylab('Number of Games') +
-  labs(title = 'Distribution of game sales in Japan')
+  labs(title = 'Distribution of game sales in Japan')+
+  scale_x_log10()
 
 ```

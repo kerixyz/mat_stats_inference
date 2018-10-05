@@ -12,7 +12,7 @@ Questions:
 3. Is the publisher of the game indicative of the game genre and platform? 
 
 Mean and Standard Deviation of Video Game Sales based on their region.
-![](mean_sd.png)
+![](vg_mean_sd.jpg)
 
 Distribution of sales in North America, Europe, and Japan
 
