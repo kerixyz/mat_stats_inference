@@ -76,7 +76,34 @@ jp_plot <-
   geom_bar() +
   xlab('Sales in Japan (in millions)') +
   ylab('Number of Games') +
-  labs(title = 'Distribution of game sales in Japan')+
-  scale_x_log10()
+  labs(title = 'Distribution of game sales in Japan')
 
+```
+Looking at whether or not kurtosis or skewness is significant
+```{r}
+#Calculating Skewness
+na_skew <- skewness(df$NA_Sales)
+eu_skew <- skewness(df$EU_Sales)
+jp_skew <- skewness(df$JP_Sales)
+
+#Calculating Kurtosis
+na_kurt <- kurtosis(df$NA_Sales)
+eu_kurt <- kurtosis(df$EU_Sales)
+jp_kurt <- kurtosis(df$JP_Sales)
+
+#datasets with skewness larger than 2sqrt(6/n) are substantially skewed
+na_skew_thumb <- 2*sqrt(6/length(df$NA_Sales))
+eu_skew_thumb <- 2*sqrt(6/length(df$EU_Sales))
+jp_skew_thumb <- 2*sqrt(6/length(df$JP_Sales))
+
+#datasets with |kurtosis| larger than 4sqrt(6/n) are substantially different from 0
+na_kurt_thumb <- 4*sqrt(6/length(df$NA_Sales))
+eu_kurt_thumb <- 4*sqrt(6/length(df$EU_Sales))
+jp_kurt_thumb <- 4*sqrt(6/length(df$JP_Sales))
+
+regions <- c('North America', 'Europe', 'Japan')
+skewness <- c(na_skew, eu_skew, jp_skew)
+kurtosis <- c(na_kurt, eu_kurt, jp_kurt)
+skew_thumb <- c(na_skew)
+kurt_thumb <- c(na_kurt_thumb, eu_kurt_thumb, jp_kurt_thumb)
 ```
