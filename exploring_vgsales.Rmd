@@ -5,6 +5,8 @@ output: html_document
 Reading in and cleaning the data
 ```{r}
 library(dplyr)
+library(e1071)
+library(gridExtra)
 
 #reading in the data
 df <- read.csv("vgsales.csv")
@@ -43,7 +45,6 @@ standard_deviation <- c(na_sd, eu_sd, jp_sd, ot_sd, gl_sd)
 
 df1 <- data.frame(region, mean, standard_deviation)
 
-library(gridExtra)
 png(filename = "mean_sd.png")
 grid.table(df1)
 dev.off()
@@ -104,6 +105,11 @@ jp_kurt_thumb <- 4*sqrt(6/length(df$JP_Sales))
 regions <- c('North America', 'Europe', 'Japan')
 skewness <- c(na_skew, eu_skew, jp_skew)
 kurtosis <- c(na_kurt, eu_kurt, jp_kurt)
-skew_thumb <- c(na_skew)
+skew_thumb <- c(na_skew_thumb, eu_skew_thumb, jp_skew_thumb)
 kurt_thumb <- c(na_kurt_thumb, eu_kurt_thumb, jp_kurt_thumb)
+
+df2 <- data.frame(regions,skewness,skew_thumb,kurtosis,kurt_thumb)
+png(filename = "shapes.png")
+grid.table(df2)
+dev.off()
 ```

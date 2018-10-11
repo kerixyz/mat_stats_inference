@@ -12,8 +12,13 @@ Questions:
 3. Is the publisher of the game indicative of the game genre and platform? 
 
 Mean and Standard Deviation of Video Game Sales based on their region. <br />
-![](vg_mean_sd.jpg)
+![](df_mean_sd.jpg)
 
 Distribution of sales in North America, Europe, and Japan
 
-![](na_plot_distribution.png) | ![](eu_plot_distribution.png) | ![](jp_plot_distribution.png)
+![](plot_na_dist.png) | ![](plot_eu_dist.png) | ![](plot_jp_dist.png)
+
+To better understand the shape of these plots, the dataframe below lists the value of kurtosis and skewness, as well the the value of 2sqrt(6/n) and 4sqrt(6/n) to verify the skewness and kurtosis. <br />
+![](df_shape.jpg)
+
+The rule of thumb for skewness states that if the value of skewness is greater than 2sqrt(6/n) then that graph is significantly skewed towards the direction of the sign. Since the table above shows that all values of skewness are greater than the rule of thumb value, the three distributions are positively skewed, which is evident in the plots as well. Similarly, the rule of thumb for kurtosis states that if the absolute value of the kurtosis is greater than 4sqrt(6/n) then the it is significantly greater than 0. Since the table above shows that all values of kurtosis are greater than the rule of thumb value, the three distributions are leptokurtic - which means that there is a steep peak and heavy tails, both evident in all plots.
