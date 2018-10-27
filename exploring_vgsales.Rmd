@@ -113,3 +113,43 @@ png(filename = "shapes.png")
 grid.table(df2)
 dev.off()
 ```
+
+Create a pareto chart of your qualitative data column.  
+The dataframe contains 3 qualitative columns: Platform, Genre, and Publisher
+
+```{r}
+#Platform
+platform_distribution <-
+  df %>%
+  ggplot(aes(x = reorder(Platform, -table(Platform)[Platform]))) +
+  geom_bar(aes(fill=Platform)) +
+  guides(fill=FALSE) +
+  xlab('Video Game Platforms') +
+  ylab('Frequency') +
+  labs(title = 'Distribution of Video Game Platforms')
+
+genre_distribution <-
+  df %>%
+  ggplot(aes(x = reorder(Genre, -table(Genre)[Genre]), fill=Genre)) +
+  guides(fill=FALSE) +
+  geom_bar() +
+  xlab('Video Game Genre') +
+  ylab('Frequency') +
+  labs(title = 'Distribution of Video Game Genre')
+
+publisher_distribution <-
+  df %>%
+  ggplot(aes(x = reorder(Publisher, table(Publisher)[Publisher]))) +
+  geom_bar(aes(fill=Publisher)) +
+  guides(fill=FALSE) +
+  xlab('Video Game Publisher') +
+  ylab('Frequency') +
+  labs(title = 'Distribution of Video Game Publisher') +
+  coord_flip()
+
+platform_distribution
+genre_distribution
+publisher_distribution
+
+
+```
