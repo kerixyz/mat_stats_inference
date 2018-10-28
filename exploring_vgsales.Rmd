@@ -187,4 +187,8 @@ right_confidence_interval <- c(sNA_right_interval, sEU_right_interval, sJP_right
 
 df3 <- data.frame(region, sample_mean, sample_standard_deviation, sample_standard_error, left_confidence_interval, right_confidence_interval)
 
+png(filename = "confidence.png", height = 50*nrow(df3), width = 200*ncol(df3))
+grid.table(df3)
+dev.off()
+
 ```
