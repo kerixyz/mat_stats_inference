@@ -3,10 +3,11 @@ title: "exploring_vgsales"
 output: html_document
 ---
 Reading in and cleaning the data
-```{r}
+```{r, include=FALSE}
 library(dplyr)
 library(e1071)
 library(gridExtra)
+library(ggplot2)
 
 #reading in the data
 df <- read.csv("vgsales.csv")
@@ -23,7 +24,7 @@ df <-
 ```
 Compute the mean and standard deviation for at least three numerical columns.
 Post your code on GitHub and post the means and standard deviations on the webpage.
-```{r}
+```{r, include=FALSE}
 #Calculating the means of the sales
 na_mean <- mean(df$NA_Sales)
 eu_mean <- mean(df$EU_Sales)
@@ -49,12 +50,11 @@ png(filename = "mean_sd.png")
 grid.table(df1)
 dev.off()
 ```
+Milstone 3 and 4:
 For each Numerical Data Column, make one or two plots of the data, using the graph that best represent the data. 
 Post the code on Github and the graphs on your webpage.
 Write a paragraph summarizing the main features of the data distribution - say the graph exhibits skewness or kurtosis and should be confirmed with quantitative calculations.
-```{r}
-library(ggplot2)
-
+```{r, include=FALSE}
 na_plot <- 
   df %>%
   ggplot(aes(x = NA_Sales)) +
@@ -81,7 +81,7 @@ jp_plot <-
 
 ```
 Looking at whether or not kurtosis or skewness is significant
-```{r}
+```{r, include=FALSE}
 #Calculating Skewness
 na_skew <- skewness(df$NA_Sales)
 eu_skew <- skewness(df$EU_Sales)
@@ -113,11 +113,10 @@ png(filename = "shapes.png")
 grid.table(df2)
 dev.off()
 ```
-
+Milestone 5: Plotting nominal or ordinal data and comparing data. 
 Create a pareto chart of your qualitative data column.  
 The dataframe contains 3 qualitative columns: Platform, Genre, and Publisher
-
-```{r}
+```{r, include=FALSE}
 #Platform
 platform_distribution <-
   df %>%
@@ -147,9 +146,9 @@ publisher_distribution <-
   labs(title = 'Distribution of Video Game Publisher') +
   coord_flip()
 
-platform_distribution
-genre_distribution
-publisher_distribution
-
+```
+Milestone 6: Confidence Intervals
+Compute the confidence intervals for the means of the three numerical columns. You may choose the confidence level. Upload your code to GitHub, and post the confidence intervals on your webpage. 
+```{r}
 
 ```
