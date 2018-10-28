@@ -16,7 +16,8 @@ Questions:
 Mean and Standard Deviation of Video Game Sales based on their region. <br />
 ![](df_mean_sd.jpg)
 
-Distribution of sales in North America, Europe, and Japan
+Distribution of sales in North America, Europe, and Japan.
+These graphs are scaled by log 10 because it is right skewed. The scale allows us to better see and understand the distribution.
 
 ![](plot_na_dist.png) 
 

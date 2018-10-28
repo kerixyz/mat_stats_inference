@@ -9,6 +9,8 @@ library(e1071)
 library(gridExtra)
 library(ggplot2)
 
+theme_set(theme_bw())
+
 #reading in the data
 df <- read.csv("vgsales.csv")
 
@@ -54,15 +56,17 @@ Write a paragraph summarizing the main features of the data distribution - say t
 na_plot <- 
   df %>%
   ggplot(aes(x = NA_Sales)) +
-  geom_bar() +
+  geom_histogram(color = "black", fill="#56B4E9") +
+  scale_x_log10() +
   xlab('Sales in North America (in millions)') +
   ylab('Number of Games') +
   labs(title = 'Distribution of game sales in North America')
-
+  
 eu_plot <- 
   df %>%
   ggplot(aes(x = EU_Sales)) +
-  geom_bar() +
+  geom_histogram(color = "black", fill="#009E73") +
+  scale_x_log10() +
   xlab('Sales in Europe (in millions)') +
   ylab('Number of Games') +
   labs(title = 'Distribution of game sales in Europe')
@@ -70,7 +74,8 @@ eu_plot <-
 jp_plot <- 
   df %>%
   ggplot(aes(x = JP_Sales)) +
-  geom_bar() +
+  geom_histogram(color = "black", fill="#D55E00") +
+  scale_x_log10() +
   xlab('Sales in Japan (in millions)') +
   ylab('Number of Games') +
   labs(title = 'Distribution of game sales in Japan')
