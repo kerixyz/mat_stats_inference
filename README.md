@@ -47,4 +47,4 @@ In calculating the confidence intervals for our three numerical column, I genera
 
 The table below shows the sample mean, sample standard deviation, sample error, and the left and right confidence intervals. 
 
-![](confidence.jpg)
+![](confidence.png)
