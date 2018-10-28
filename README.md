@@ -16,7 +16,11 @@ Mean and Standard Deviation of Video Game Sales based on their region. <br />
 
 Distribution of sales in North America, Europe, and Japan
 
-![](plot_na_dist.png) | ![](plot_eu_dist.png) | ![](plot_jp_dist.png)
+![](plot_na_dist.png) 
+
+![](plot_eu_dist.png) 
+
+![](plot_jp_dist.png)
 
 To better understand the shape of these plots, the dataframe below lists the value of kurtosis and skewness, as well the the value of 2sqrt(6/n) and 4sqrt(6/n) to verify the skewness and kurtosis. <br />
 ![](df_shape.jpg)

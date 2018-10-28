@@ -20,8 +20,8 @@ df <-
 #don't want to visualize games with 0 sales so let's remove that
 df <-
   df %>% 
-  filter(Global_Sales > 0.1)
-```
+  filter(NA_Sales > 0) 
+``` 
 Compute the mean and standard deviation for at least three numerical columns.
 Post your code on GitHub and post the means and standard deviations on the webpage.
 ```{r, include=FALSE}
@@ -29,20 +29,16 @@ Post your code on GitHub and post the means and standard deviations on the webpa
 na_mean <- mean(df$NA_Sales)
 eu_mean <- mean(df$EU_Sales)
 jp_mean <- mean(df$JP_Sales)
-ot_mean <- mean(df$Other_Sales)
-gl_mean <- mean(df$Global_Sales)
 
 #Calculating the standard deviations of the sales
 na_sd <- sd(df$NA_Sales)
 eu_sd <- sd(df$EU_Sales)
 jp_sd <- sd(df$JP_Sales)
-ot_sd <- sd(df$Other_Sales)
-gl_sd <- sd(df$Global_Sales)
 
 #saving the data into a dataframe
-region <- c('North America', 'Europe', 'Japan', 'Other', 'Global')
-mean <- c(na_mean, eu_mean, jp_mean, ot_mean, gl_mean)
-standard_deviation <- c(na_sd, eu_sd, jp_sd, ot_sd, gl_sd)
+region <- c('North America', 'Europe', 'Japan')
+mean <- c(na_mean, eu_mean, jp_mean)
+standard_deviation <- c(na_sd, eu_sd, jp_sd)
 
 df1 <- data.frame(region, mean, standard_deviation)
 
@@ -78,7 +74,6 @@ jp_plot <-
   xlab('Sales in Japan (in millions)') +
   ylab('Number of Games') +
   labs(title = 'Distribution of game sales in Japan')
-
 ```
 Looking at whether or not kurtosis or skewness is significant
 ```{r, include=FALSE}
@@ -150,5 +145,46 @@ publisher_distribution <-
 Milestone 6: Confidence Intervals
 Compute the confidence intervals for the means of the three numerical columns. You may choose the confidence level. Upload your code to GitHub, and post the confidence intervals on your webpage. 
 ```{r}
+#We'll use a sample size of 30 since we don't have the entire population of video games
+N <- 30
+
+#generating a sample of size 30 for all 3 numerical categories. then calculating respective means. standard deviation, and standard errors
+#with a size of 30, use CLT which tells us that mean(df$_Sales) follows a normal distribution with mean(sample_) and standard error approximately sd/sqrt(N)
+
+sNA <- sample(df$NA_Sales, N)
+sNA_mean <- mean(sNA)
+sNA_sd <- sd(sNA)
+sNA_error <- sNA_sd/sqrt(N)
+
+sEU <- sample(df$EU_Sales, N)
+sEU_mean <- mean(sEU)
+sEU_sd <- sd(sEU)
+sEU_error <- sEU_sd/sqrt(N)
+
+sJP <- sample(df$JP_Sales, N)
+sJP_mean <- mean(sJP)
+sJP_sd <- sd(sJP)
+sJP_error <- sJP_sd/sqrt(N)
+
+#defining our confidence interval, we'll use 95%
+Q <- qnorm(1 - 0.05/2)
+
+sNA_left_interval <- sNA_mean - Q*sNA_error
+sEU_left_interval <- sEU_mean - Q*sEU_error
+sJP_left_interval <- sJP_mean - Q*sJP_error
+
+sNA_right_interval <- sNA_mean + Q*sNA_error
+sEU_right_interval <- sEU_mean + Q*sEU_error
+sJP_right_interval <- sJP_mean + Q*sJP_error
+
+#saving into new dataframe
+region <- c('North America', 'Europe', 'Japan')
+sample_mean <- c(sNA_mean, sEU_mean, sJP_mean)
+sample_standard_deviation <- c(sNA_sd, sEU_sd, sJP_sd)
+sample_standard_error <- c(sNA_error, sEU_error, sJP_error)
+left_confidence_interval <- c(sNA_left_interval, sEU_left_interval, sJP_left_interval)
+right_confidence_interval <- c(sNA_right_interval, sEU_right_interval, sJP_right_interval)
+
+df3 <- data.frame(region, sample_mean, sample_standard_deviation, sample_standard_error, left_confidence_interval, right_confidence_interval)
 
 ```
