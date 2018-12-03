@@ -80,7 +80,9 @@ jp_plot <-
   ylab('Number of Games') +
   labs(title = 'Distribution of game sales in Japan')
 ```
+
 Looking at whether or not kurtosis or skewness is significant
+
 ```{r, include=FALSE}
 #Calculating Skewness
 na_skew <- skewness(df$NA_Sales)
@@ -113,9 +115,11 @@ png(filename = "shapes.png")
 grid.table(df2)
 dev.off()
 ```
+
 Milestone 5: Plotting nominal or ordinal data and comparing data. 
 Create a pareto chart of your qualitative data column.  
 The dataframe contains 3 qualitative columns: Platform, Genre, and Publisher
+
 ```{r, include=FALSE}
 #Platform
 platform_distribution <-
@@ -147,8 +151,10 @@ publisher_distribution <-
   coord_flip()
 
 ```
+
 Milestone 6: Confidence Intervals
 Compute the confidence intervals for the means of the three numerical columns. You may choose the confidence level. Upload your code to GitHub, and post the confidence intervals on your webpage. 
+
 ```{r}
 #We'll use a sample size of 30 since we don't have the entire population of video games
 N <- 30
