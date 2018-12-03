@@ -48,3 +48,15 @@ In calculating the confidence intervals for our three numerical column, I genera
 The table below shows the sample mean, sample standard deviation, sample error, and the left and right confidence intervals. 
 
 ![](confidence.png)
+
+***
+
+3 Hypotheses Testing
+
+***
+
+ANOVA of average video game sales in North America grouped by top 3 video game platforms
+
+***
+
+ANOVA of average video game sales in North America grouped by top 3 video game platforms
