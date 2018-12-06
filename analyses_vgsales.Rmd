@@ -29,17 +29,51 @@ Milestone 7: Hypothesis Testing
 Decide on and test 3 hypotheses about your data.  You can choose the alpha.  Upload your code to GitHub.  Write a paragraph describing what you tested and summarizing the results of your tests on your website.
 
 ```{r}
+
+
 ```
 
 Milestone 8: Regression or other analysis
 Perform a statistical analysis of your choice on your data.  This can be computing a regression line, computing one of the previous analyses on a subset of the data, an analysis of variance (ANOVA) test, or any other statistical test.  Write a paragraph briefly describing the analysis and the results on your website and upload the code to GitHub.
 
->>perform ANOVA on average NA sales grouped by top 3 video game platforms
+perform ANOVA on average NA sales grouped by top 3 video game platforms
 ```{r}
+
+#making a smaller dataframe for analysis of variance
+anova1_df <- 
+  df %>% 
+  #top 3 platforms: PS4, Xbox One, and 3DS
+  filter(Platform == "PS4" | Platform == "XOne" | Platform == "3DS") %>%
+  #only kept the platform type and the sales
+  select(Platform, NA_Sales)
+
+#make a boxplot of the smaller data
+anova1_plot <- 
+  anova1_df %>%
+  ggplot(aes(Platform, NA_Sales)) + 
+  geom_boxplot() +
+  xlab('Top 3 Platforms') +
+  ylab('Sales in North America') +
+  labs(title = 'Boxplot of Top 3 Platforms')
+
+#display the anova table
+anova1_platform <- aov(NA_Sales ~ Platform, data = anova1_df)
+summary(anova1_platform)
+
+#display the grand mean and all group means, plus group sizes
+model.tables(anova1_platform, "means")
+
+#perform turkey's honest significant different test as post-hoc analysis
+anova1_posthoc <- TukeyHSD(anova1_platform)
+
+#result of analysis gives difference of means, and upper and lower values
+#of confidence interval, and adjusted p-values for htat pair of groups
+plot(anova1_posthoc)
+
 ```
 
 Extra Credit: Additional regression or analysis
->>perform ANOVA on average NA sales grouped by top 5 video game genre
+perform ANOVA on average NA sales grouped by top 5 video game genre
 
 ```{r}
 ```
