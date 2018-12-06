@@ -1,0 +1,45 @@
+---
+title: "hypotheses_testing_vgsales"
+output: html_document
+---
+Reading in and cleaning the data
+```{r, include=FALSE}
+library(dplyr)
+library(e1071)
+library(gridExtra)
+library(ggplot2)
+
+theme_set(theme_bw())
+
+#reading in the data
+df <- read.csv("vgsales.csv")
+
+#since df contains 16k observations, lets limit the data to one year
+df <- 
+  df %>%
+  filter(Year == '2016')
+
+#don't want to visualize games with 0 sales so let's remove that
+df <-
+  df %>% 
+  filter(NA_Sales > 0) 
+``` 
+
+Milestone 7: Hypothesis Testing
+Decide on and test 3 hypotheses about your data.  You can choose the alpha.  Upload your code to GitHub.  Write a paragraph describing what you tested and summarizing the results of your tests on your website.
+
+```{r}
+```
+
+Milestone 8: Regression or other analysis
+Perform a statistical analysis of your choice on your data.  This can be computing a regression line, computing one of the previous analyses on a subset of the data, an analysis of variance (ANOVA) test, or any other statistical test.  Write a paragraph briefly describing the analysis and the results on your website and upload the code to GitHub.
+
+>>perform ANOVA on average NA sales grouped by top 3 video game platforms
+```{r}
+```
+
+Extra Credit: Additional regression or analysis
+>>perform ANOVA on average NA sales grouped by top 5 video game genre
+
+```{r}
+```
