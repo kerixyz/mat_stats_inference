@@ -39,7 +39,8 @@ Looking at the distribution of the qualitative columns in our dataset: platforms
 
 ![](plot_publisher_dist.png)
 
-We see that PS4 is a very popular platform for purchasing videogames. This surprises me as I assume that there are more people playing on their PCs, until I realized that we are looking at video game sales and not player base in general, which makes sense because a lot of popular pc games are free such as League of Legends and Fortnite, as opposed to PS4 games. Action games are most popular video game genre. I flipped the graph for the video game publisher since it would be easier to read the x-values (publishers). 
+We see that PS4 is a very popular platform for purchasing videogames. This surprises me as I assume that there are more people playing on their PCs, until I realized that we are looking at video game sales and not player base in general, which makes sense because a lot of popular pc games are free such as League of Legends and Fortnite, as opposed to PS4 games. Action games are most popular video game genre. I flipped the graph for the video game publisher since it would be easier to read the x-
+values (publishers). 
 
 ***
 
@@ -56,6 +57,14 @@ The table below shows the sample mean, sample standard deviation, sample error, 
 ***
 
 ANOVA of average video game sales in North America grouped by top 3 video game platforms
+
+Below is the plot of the sales of video games in North America grouped by their platforms: 3DS, PS4, and Xbox One. These three platforms are the most popular platforms in terms of sales. 
+
+![](plot_anova1_platform.png)
+
+I conducted an analysis of variance of sales in north america grouped by the top 3 platforms. 
+
+![](plot_anova1_tukey.png)
 
 ***
 

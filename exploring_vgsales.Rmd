@@ -125,7 +125,7 @@ The dataframe contains 3 qualitative columns: Platform, Genre, and Publisher
 platform_distribution <-
   df %>%
   ggplot(aes(x = reorder(Platform, -table(Platform)[Platform]))) +
-  geom_bar(aes(fill=Platform)) +
+  geom_bar(aes(fill=Platform), color = "black") +
   guides(fill=FALSE) +
   xlab('Video Game Platforms') +
   ylab('Frequency') +
@@ -135,7 +135,7 @@ genre_distribution <-
   df %>%
   ggplot(aes(x = reorder(Genre, -table(Genre)[Genre]), fill=Genre)) +
   guides(fill=FALSE) +
-  geom_bar() +
+  geom_bar(color = "black") +
   xlab('Video Game Genre') +
   ylab('Frequency') +
   labs(title = 'Distribution of Video Game Genre')
@@ -143,7 +143,7 @@ genre_distribution <-
 publisher_distribution <-
   df %>%
   ggplot(aes(x = reorder(Publisher, table(Publisher)[Publisher]))) +
-  geom_bar(aes(fill=Publisher)) +
+  geom_bar(aes(fill=Publisher), color = "black") +
   guides(fill=FALSE) +
   xlab('Video Game Publisher') +
   ylab('Frequency') +
