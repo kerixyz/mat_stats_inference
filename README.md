@@ -68,4 +68,12 @@ I conducted an analysis of variance of sales in north america grouped by the top
 
 ***
 
-ANOVA of average video game sales in North America grouped by top 3 video game platforms
+ANOVA of average video game sales in North America grouped by top 3 video game genres
+
+Below is the plot of the sales of video games in North America grouped by their platforms: Action, Shooter, and Sports. These three platforms are the most popular platforms in terms of sales. 
+
+![](plot_anova2_genre.png)
+
+I conducted an analysis of variance of sales in north america grouped by the top 3 platforms. 
+
+![](plot_anova2_tukey.png)

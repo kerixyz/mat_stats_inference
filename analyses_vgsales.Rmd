@@ -73,7 +73,38 @@ plot(anova1_posthoc)
 ```
 
 Extra Credit: Additional regression or analysis
-perform ANOVA on average NA sales grouped by top 5 video game genre
+perform ANOVA on average NA sales grouped by top 3 video game genre
 
 ```{r}
+
+#making a smaller dataframe for analysis of variance
+anova2_df <- 
+  df %>% 
+  #top 5 genres: action, shooter, sports
+  filter(Genre == "Action" | Genre  == "Shooter" | Genre  == "Sports") %>%
+  #only kept the platform type and the sales
+  select(Genre , NA_Sales)
+
+#make a boxplot of the smaller data
+anova2_plot <- 
+  anova2_df %>%
+  ggplot(aes(Genre, NA_Sales)) + 
+  geom_boxplot() +
+  xlab('Top 3 Genres') +
+  ylab('Sales in North America') +
+  labs(title = 'Boxplot of Top 3 Genres')
+
+#display the anova table
+anova2_genre <- aov(NA_Sales ~ Genre, data = anova2_df)
+summary(anova2_genre)
+
+#display the grand mean and all group means, plus group sizes
+model.tables(anova2_genre, "means")
+
+#perform turkey's honest significant different test as post-hoc analysis
+anova2_posthoc <- TukeyHSD(anova2_genre)
+
+#result of analysis gives difference of means, and upper and lower values
+#of confidence interval, and adjusted p-values for htat pair of groups
+plot(anova2_posthoc)
 ```
