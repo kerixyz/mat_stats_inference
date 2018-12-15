@@ -58,22 +58,15 @@ The table below shows the sample mean, sample standard deviation, sample error, 
 
 ANOVA of average video game sales in North America grouped by top 3 video game platforms
 
-Below is the plot of the sales of video games in North America grouped by their platforms: 3DS, PS4, and Xbox One. These three platforms are the most popular platforms in terms of sales. 
+Below is the plot of the sales of video games in North America grouped by their platforms: 3DS, PS4, and Xbox One. These three platforms are the most popular platforms in terms of sales. I conducted an analysis of variance of sales in north america grouped by the top 3 platforms. 
 
-![](plot_anova1_platform.png)
+![](plot_anova1_platform.png) | ![](plot_anova1_tukey.png)
 
-I conducted an analysis of variance of sales in north america grouped by the top 3 platforms. 
-
-![](plot_anova1_tukey.png)
 
 ***
 
 ANOVA of average video game sales in North America grouped by top 3 video game genres
 
-Below is the plot of the sales of video games in North America grouped by their platforms: Action, Shooter, and Sports. These three platforms are the most popular platforms in terms of sales. 
+Below is the plot of the sales of video games in North America grouped by their platforms: Action, Shooter, and Sports. These three platforms are the most popular platforms in terms of sales. I conducted an analysis of variance of sales in north america grouped by the top 3 platforms. 
 
-![](plot_anova2_genre.png)
-
-I conducted an analysis of variance of sales in north america grouped by the top 3 platforms. 
-
-![](plot_anova2_tukey.png)
+![](plot_anova2_genre.png) | ![](plot_anova2_tukey.png)
