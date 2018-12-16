@@ -54,17 +54,17 @@ The table below shows the sample mean, sample standard deviation, sample error, 
 
 Hypotheses Testing
 
-For the purpose of this project, I will be using the average global sales as the 'ground truth' and run 4 hypothesis tests where I am comparing the average sales of NA against Global, EU against Global, JP against Global, and Other against Global Sales. The alpha for the t-test is 0.05 so the confidence level generated is 95%.
+For the purpose of this project, I will be using the average global sales as the 'ground truth' and run 4 hypothesis tests where I am comparing the average sales of NA against Global, EU against Global, JP against Global, and Other against Global Sales. The alpha for the t-test is 0.05 so the confidence level generated is 95%. After conducting the t-test on all these pairs of means, I found that we can reject the null hypothesis for all four different scenarios because the test statistic is less than the critical value. 
 
 Below is the table of the results of the function t-test. 
 
-| North America vs Global Sales | Europe vs Global Sales |
-| ----------------------------- | ---------------------- |
-| ![](ttest_na_gl.png)          | ![](ttest_eu_gl.png)   |
+| Regions | North America vs Global Sales | Europe vs Global Sales |
+| ------- | ----------------------------- | ---------------------- |
+| T-test  | ![](ttest_na_gl.png)          | ![](ttest_eu_gl.png)   |
 
-| Japan vs Global Sales | Other vs Global Sales |
-| --------------------- | --------------------- |
-| ![](ttest_jp_gl.png)  | ![](ttest_ot_gl.png)  |
+| Regions | Japan vs Global Sales | Other vs Global Sales |
+| ------- | --------------------- | --------------------- |
+| T-test  | ![](ttest_jp_gl.png)  | ![](ttest_ot_gl.png)  |
 
 
 ***
