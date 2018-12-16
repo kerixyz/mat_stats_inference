@@ -19,11 +19,7 @@ Mean and Standard Deviation of Video Game Sales based on their region. <br />
 Distribution of sales in North America, Europe, and Japan.
 These graphs are scaled by log 10 because it is right skewed. The scale allows us to better see and understand the distribution.
 
-![](plot_na_dist.png) 
-
-![](plot_eu_dist.png) 
-
-![](plot_jp_dist.png)
+| ![](plot_na_dist.png) | ![](plot_eu_dist.png)  | ![](plot_jp_dist.png) |
 
 To better understand the shape of these plots, the dataframe below lists the value of kurtosis and skewness, as well the the value of 2sqrt(6/n) and 4sqrt(6/n) to verify the skewness and kurtosis. <br />
 ![](df_shape.jpg)
@@ -33,11 +29,7 @@ The rule of thumb for skewness states that if the value of skewness is greater t
 ***
 Looking at the distribution of the qualitative columns in our dataset: platforms, publishers, and genre
 
-![](plot_platform_dist.png)
-
-![](plot_genre_dist.png) 
-
-![](plot_publisher_dist.png)
+| ![](plot_platform_dist.png) | ![](plot_genre_dist.png) | ![](plot_publisher_dist.png)
 
 We see that PS4 is a very popular platform for purchasing videogames. This surprises me as I assume that there are more people playing on their PCs, until I realized that we are looking at video game sales and not player base in general, which makes sense because a lot of popular pc games are free such as League of Legends and Fortnite, as opposed to PS4 games. Action games are most popular video game genre. I flipped the graph for the video game publisher since it would be easier to read the x-
 values (publishers). 
