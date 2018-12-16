@@ -58,10 +58,13 @@ For the purpose of this project, I will be using the average global sales as the
 
 Results of the t.test
 
-| North America vs Global Sales | Europe vs Global Sales | Japan vs Global Sales | Other vs Global Sales |
-| ----------------------------- | ---------------------- | --------------------- | --------------------- |
-| ![](ttest_na_gl.png)          | ![](ttest_eu_gl.png)   | ![](ttest_jp_gl.png)  | ![](ttest_ot_gl.png)  |
+| North America vs Global Sales | Europe vs Global Sales |
+| ----------------------------- | ---------------------- |
+| ![](ttest_na_gl.png)          | ![](ttest_eu_gl.png)   |
 
+| Japan vs Global Sales | Other vs Global Sales |
+| --------------------- | --------------------- |
+| ![](ttest_jp_gl.png)  | ![](ttest_ot_gl.png)  |
 ***
 
 ANOVA of average video game sales in North America grouped by top 3 video game platforms
