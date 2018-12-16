@@ -54,9 +54,9 @@ The table below shows the sample mean, sample standard deviation, sample error, 
 
 Hypotheses Testing
 
-For the purpose of this project, I will be using the average global sales as the 'ground truth' and run 4 hypothesis tests where I am comparing the average sales of NA against Global, EU against Global, JP against Global, and Other against Global
+For the purpose of this project, I will be using the average global sales as the 'ground truth' and run 4 hypothesis tests where I am comparing the average sales of NA against Global, EU against Global, JP against Global, and Other against Global Sales. The alpha for the t-test is 0.05 so the confidence level generated is 95%.
 
-Results of the t.test
+Below is the table of the results of the function t-test. 
 
 | North America vs Global Sales | Europe vs Global Sales |
 | ----------------------------- | ---------------------- |
@@ -65,13 +65,15 @@ Results of the t.test
 | Japan vs Global Sales | Other vs Global Sales |
 | --------------------- | --------------------- |
 | ![](ttest_jp_gl.png)  | ![](ttest_ot_gl.png)  |
+
+
 ***
 
 ANOVA of average video game sales in North America grouped by top 3 video game platforms
 
 Below is the plot of the sales of video games in North America grouped by their platforms: 3DS, PS4, and Xbox One. These three platforms are the most popular platforms in terms of sales. I conducted an analysis of variance of sales in north america grouped by the top 3 platforms. 
 
-![](plot_anova1_platform.png) | ![](plot_anova1_tukey.png)
+| ![](plot_anova1_platform.png) | ![](plot_anova1_tukey.png) |
 
 
 ***
@@ -80,4 +82,4 @@ ANOVA of average video game sales in North America grouped by top 3 video game g
 
 Below is the plot of the sales of video games in North America grouped by their platforms: Action, Shooter, and Sports. These three platforms are the most popular platforms in terms of sales. I conducted an analysis of variance of sales in north america grouped by the top 3 platforms. 
 
-![](plot_anova2_genre.png) | ![](plot_anova2_tukey.png)
+| ![](plot_anova2_genre.png) | ![](plot_anova2_tukey.png) |
