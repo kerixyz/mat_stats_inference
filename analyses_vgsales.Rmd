@@ -28,8 +28,19 @@ df <-
 Milestone 7: Hypothesis Testing
 Decide on and test 3 hypotheses about your data.  You can choose the alpha.  Upload your code to GitHub.  Write a paragraph describing what you tested and summarizing the results of your tests on your website.
 
-```{r}
 
+```{r}
+#North America Sales against Global Sales
+t.test(df$NA_Sales, df$Global_Sales)
+
+#Europe Sales against Global Sales
+t.test(df$EU_Sales, df$Global_Sales)
+
+#Japan Sales against Global Sales
+t.test(df$JP_Sales, df$Global_Sales)
+
+#Other Sales against Global Sales
+t.test(df$Other_Sales, df$Global_Sales)
 
 ```
 

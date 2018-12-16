@@ -52,7 +52,14 @@ The table below shows the sample mean, sample standard deviation, sample error, 
 
 ***
 
-3 Hypotheses Testing
+Hypotheses Testing
+
+For the purpose of this project, I will be using the average global sales as the 'ground truth' and run 4 hypothesis tests where I am comparing the average sales of NA against Global, EU against Global, JP against Global, and Other against Global
+
+Results of the t.test
+
+North America vs Global Sales | Europe vs Global Sales | Japan vs Global Sales | Other vs Global Sales
+![](ttest_na_gl.png) | ![](ttest_eu_gl.png) | ![](ttest_jp_gl.png) | ![](ttest_ot_gl.png)
 
 ***
 
