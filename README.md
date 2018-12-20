@@ -61,11 +61,8 @@ There are four different hypothesis to consider:
 |   | Null Hypothesis            | Alternate Hypothesis        |  
 | - | -------------------------- | --------------------------- |
 | 1 | NA_Sales = Global_Sales    | NA_Sales != Global_Sales    |
-| - | -------------------------- | --------------------------- |
 | 2 | EU_Sales = Global_Sales    | EU_Sales != Global_Sales    |
-| - | -------------------------- | --------------------------- |
 | 3 | Japan_Sales = Global_Sales | Japan_Sales != Global_Sales |
-| - | -------------------------- | --------------------------- |
 | 4 | Other_Sales = Global_Sales | Other_Sales != Global_Sales |
 
 Below is the table of the results of the function t-test. 
@@ -94,7 +91,6 @@ Below is the ANOVA table, which tells us that we CANNOT reject the null hypothes
 |           | degrees of freedom | sum squared | mean squared | F-Value | Pr(>F) |
 | --------- | ------------------ | ----------- | ------------ | ------- | ------ |
 | Platform  |                  2 |       0.133 |      0.06633 |   0.997 |  0.372 |
-| --------- | ------------------ | ----------- | ------------ | ------- | ------ |
 | Residuals |                121 |       8.049 |      0.06652 |         |        |    
 
 Below are the boxplots of sales of each platform, and the plot of the Tukey's Significant Different Test.
@@ -115,7 +111,6 @@ Below is the ANOVA table, which tells us that we CANNOT reject the null hypothes
 |           | degrees of freedom | sum squared | mean squared | F-Value | Pr(>F) |
 | --------- | ------------------ | ----------- | ------------ | ------- | ------ |
 | Platform  |                  2 |       0.588 |       0.2940 |   4.382 | 0.0148 |
-| --------- | ------------------ | ----------- | ------------ | ------- | ------ |
 | Residuals |                108 |       7.246 |       0.0671 |         |        |    
 
 Below are the boxplots of sales of the three genres, and the plot of Tukey's Significant Difference Test. 
