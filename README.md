@@ -1,4 +1,4 @@
-Keri Mallari <br />
+Keri M <br />
 Fall 2018 Project
 
 Data: Video Game Sales <br />
